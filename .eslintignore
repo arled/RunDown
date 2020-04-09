@@ -1,0 +1,13 @@
+!.eslintrc.js
+
+node_modules
+/ios
+/android
+/assets
+/coverage
+.vscode/
+/tmp
+*.jsbundle
+/statements-template/
+/scripts
+/src/test-utils/*.js
