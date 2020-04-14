@@ -12,7 +12,7 @@ const Login = ({ navigation, route }: AuthNavigationProps<'Login'>) => {
       <Button
         title="Login"
         onPress={() => {
-          // TODO: Fill in some for and submit. (Formik)
+          // TODO: Fill in some form and submit. (Formik)
           login()
         }}
       />
