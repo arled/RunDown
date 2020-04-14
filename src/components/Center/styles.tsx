@@ -7,6 +7,8 @@ interface ScrollLayoutStyles {
 const styles: ScrollLayoutStyles = StyleSheet.create({
   scrollView: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 })
 

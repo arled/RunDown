@@ -22,7 +22,9 @@
       "@rundown-screens/*": ["./src/screens/*"],
       "@rundown-components/*": ["./src/components/*"],
       "@rundown-routes/*": ["./src/routes/*"],
-      "@rundown-store/*": ["./src/store/*"]
+      "@rundown-store/*": ["./src/store/*"],
+      "@rundown-utils/*": ["./src/utils/*"],
+      "@rundown-types/*": ["./src/types/*"]
     }
   },
   "include": ["./src/**/*", "./App.tsx"],

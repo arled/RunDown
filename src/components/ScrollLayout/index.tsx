@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { ScrollView, ViewStyle } from 'react-native'
 import styles from './styles'
+import Center from '../Center'
 
 export interface ScrollLayoutProps {
   children: ReactNode
@@ -8,9 +9,9 @@ export interface ScrollLayoutProps {
   style?: ViewStyle
 }
 
-const ScrollLayout: React.FC<ScrollLayoutProps> = (props) => (
+const ScrollLayout: React.FC<ScrollLayoutProps> = ({ children }) => (
   <ScrollView contentContainerStyle={styles.scrollView}>
-    {props.children}
+    <Center>{children}</Center>
   </ScrollView>
 )
 

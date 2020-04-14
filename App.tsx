@@ -1,1 +1,3 @@
-export default require('@rundown-root/App').default
+import { Providers } from '@rundown-routes/Providers'
+
+export default Providers
