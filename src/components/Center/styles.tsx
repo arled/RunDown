@@ -1,11 +1,11 @@
 import { StyleSheet, ViewStyle } from 'react-native'
 
 interface ScrollLayoutStyles {
-  scrollView: ViewStyle
+  container: ViewStyle
 }
 
 const styles: ScrollLayoutStyles = StyleSheet.create({
-  scrollView: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

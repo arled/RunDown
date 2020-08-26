@@ -1,10 +1,12 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 0,
+  inputField: {
+    height: 40,
+    borderColor: 'grey',
+    borderBottomWidth: 1,
+    margin: 20,
   },
-  scrollView: {},
 })
 
 export default styles
