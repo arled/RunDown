@@ -1,8 +1,8 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { AppParamList } from './AppParamList'
-import Home from '@rundown-screens/Home'
-import History from '@rundown-screens/History'
+import Todos from '@rundown-root/screens/Todos'
+import TodosRedux from '@rundown-root/screens/TodosRedux'
 
 interface AppTabsProps {}
 
@@ -20,8 +20,8 @@ export const AppTabs: React.FC<AppTabsProps> = () => {
         inactiveTintColor: 'gray',
       }}
     >
-      <Tabs.Screen name="Home" component={Home} />
-      <Tabs.Screen name="History" component={History} />
+      <Tabs.Screen name="Todos" component={Todos} />
+      <Tabs.Screen name="TodosRedux" component={TodosRedux} />
     </Tabs.Navigator>
   )
 }

@@ -9,7 +9,7 @@ export interface CenterProps {
 }
 
 const Center: React.FC<CenterProps> = ({ children }) => (
-  <View style={styles.scrollView}>{children}</View>
+  <View style={styles.container}>{children}</View>
 )
 
 export default Center
