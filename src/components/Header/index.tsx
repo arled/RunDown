@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button, Text, View, ViewStyle } from 'react-native'
+import { Text, View, ViewStyle } from 'react-native'
 import styles from './styles'
+import { Button } from '@rundown-components/Button'
 
 export interface CenterProps {
   title: string
@@ -15,7 +16,9 @@ const Header: React.FC<CenterProps> = ({ title, action }) => (
       {/* TODO: Create title component. */}
       <Text style={styles.title}>{title}</Text>
     </View>
-    {action && <Button title="Logout" onPress={() => action()} />}
+    {action && (
+      <Button showBackground={false} title="Logout" onPress={() => action()} />
+    )}
   </View>
 )
 

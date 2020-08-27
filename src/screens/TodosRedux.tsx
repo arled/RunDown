@@ -1,11 +1,13 @@
 import * as React from 'react'
-import { Button, Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
+import { AuthContext } from '@rundown-routes/AuthProvider'
 import ScrollLayout from '@rundown-components/ScrollLayout'
 import Header from '@rundown-components/Header'
 import { addTodo, doneTodo } from '../actions/todos/todosActions'
 import { AppState, Todos } from '@rundown-types/Types'
-import InputField from '@rundown-components/InputField'
+import { InputField } from '@rundown-components/InputField'
+import { Button } from '@rundown-components/Button'
 
 interface TodosReduxProps {
   onAddTodo: (text: string) => void
@@ -29,12 +31,13 @@ const TodosRedux: React.FC<TodosReduxProps> = ({
     onDoneTodo(id)
   }
 
+  const { logout } = React.useContext(AuthContext)
+
   return (
     <ScrollLayout testID="TodosRedux screen" showSafeAreaTop={false}>
-      <Header title="TODO REDUX" />
+      <Header title="Redux Todos" action={() => logout()} />
       <InputField value={value} onChange={(value) => setValue(value)} />
-      {/* TODO: Create Button component. */}
-      <Button title="ADD" onPress={() => onPressAddTodo()} />
+      <Button title="Add" onPress={() => onPressAddTodo()} />
       {todos &&
         todos.map((item) => (
           /* TODO: Create TodoItem component. */
@@ -49,7 +52,7 @@ const TodosRedux: React.FC<TodosReduxProps> = ({
                 marginVertical: 5,
                 padding: 16,
                 borderWidth: 3,
-                borderColor: item.completed ? 'green' : '#bbb',
+                borderColor: item.completed ? '#1abc9c' : '#bbb',
                 borderRadius: 10,
               }}
             >
