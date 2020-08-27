@@ -7,6 +7,7 @@ interface ScrollLayoutStyles {
 const styles: ScrollLayoutStyles = StyleSheet.create({
   container: {
     flex: 1,
+    alignContent: 'center',
     justifyContent: 'center',
     alignItems: 'center',
   },

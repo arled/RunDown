@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     height: 235,
     backgroundColor: '#16a085',
     borderBottomColor: '#1abc9c',
-    borderBottomWidth: 5, //StyleSheet.hairlineWidth,
+    borderBottomWidth: 5,
   },
   titleContainer: {
     flex: 1,

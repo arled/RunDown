@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { Button, Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native'
 import ScrollLayout from '@rundown-components/ScrollLayout'
 import { AuthContext } from '@rundown-routes/AuthProvider'
 import Header from '@rundown-components/Header'
-import InputField from '@rundown-components/InputField'
+import { InputField } from '@rundown-components/InputField'
+import { Button } from '@rundown-components/Button'
 
 interface HomeProps {}
 
@@ -19,12 +20,10 @@ const Home: React.FC<HomeProps> = () => {
 
   return (
     <ScrollLayout testID="home screen" showSafeAreaTop={false}>
-      <Header title="TODOS" action={() => logout()} />
+      <Header title="Simple Todos" action={() => logout()} />
       <InputField value={value} onChange={(value) => setValue(value)} />
-
-      {/* TODO: Create Button component. */}
       <Button
-        title="ADD"
+        title="Add"
         onPress={() => {
           value &&
             setTodos((items: TodoItem) => [

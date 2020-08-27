@@ -8,23 +8,15 @@ export interface InputFieldProps {
   placeHolder?: string
 }
 
-const InputField: React.FC<InputFieldProps> = ({
+export const InputField: React.FC<InputFieldProps> = ({
   value,
   onChange,
   placeHolder,
-}) => {
-  const handleChange = (value: string) => {
-    onChange(value)
-  }
-
-  return (
-    <TextInput
-      style={styles.inputField}
-      placeholder={placeHolder}
-      value={value}
-      onChangeText={(value) => handleChange(value)}
-    />
-  )
-}
-
-export default InputField
+}) => (
+  <TextInput
+    style={styles.inputField}
+    placeholder={placeHolder}
+    value={value}
+    onChangeText={(value) => onChange(value)}
+  />
+)
